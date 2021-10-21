@@ -6,9 +6,9 @@ I based the idea in the results of a local lottery who play every week, so each 
 
 After enter the data of each week, the program gives the numbers who has 2, 3, 4 and 5 or more repetitions separately in the shorter version of the game (36 numbers version) and in the long version of the game with 108 numbers the program gives the numbers who has 3, 4, 5 and 6 or more repetitions.
 
-The file named "minis.py" contains the functions of the main program.
+The file named "main.py" is the launcher program, the file named "minis.py" contains the functions of the main program and the file named "dbaction.py" contains the functions for the database actions.
 
-Instead of using 2 txt files storing the results of the last 6 weeks, I use a database with a table named "options" contains all de numbers of the 2 types of games. This database has created in SQLite.
+Instead of using 2 txt files storing the results of the last 6 weeks, I use a database with a table named "games" contains all de numbers of the 2 types of games. This database has created in SQLite.
 
 I'm using lists, tuples and statements if, elif and for.
 
