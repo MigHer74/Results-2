@@ -10,7 +10,7 @@ The file named "main.py" is the launcher program, the file named "minis.py" cont
 
 Instead of using 2 txt files storing the results of the last 6 weeks, I use a database named "results2.db" with a table named "games" contains all de numbers of the 2 types of games. This database has created in SQLite.
 
-I'm using lists, tuples and statements if, elif and for.
+For this project I'm using 2 python modules ("os" and "tabulate") and elements like functions, lists, tuples and statements if, elif and for.  
 
 The program is still growing, so I'm going to still update the progress.
   
