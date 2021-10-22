@@ -16,11 +16,11 @@ The program is still growing, so I'm going to still update the progress.
   
 
 ## Project Files
-- readme.md | Readme file.
-- main.py   | Main Program.
-- minis.py       | General program functions.
-- dbaction.py | Functions that interact with the database
-- results2.db  | Database file.
+- readme.md - Readme file.
+- main.py - Main Program.
+- minis.py - General program functions.
+- dbaction.py - Functions that interact with the database
+- results2.db - Database file.
 
 
 ## Project Directories
