@@ -70,6 +70,18 @@ def check_data(data):
     return data
 
 
+def show_data():
+    print("Select the data you want to view:\n\nN - Normal Game\nL - Long Game\nA - All Data\n")
+
+    vsel = input("Choose an option: ")
+    data = dba.view_db(vsel)
+    headers = ["ID", "GAME TYPE", "WEEK", "N1","N2","N3","N4","N5","N6"]
+    table = tba.tabulate(data, headers, tablefmt = "fancy_grid")
+
+    print(table)
+    input("\nPress any key to continue...")
+
+
 def delete_data():
     print("Select the game you want to delete de data:\n\nN - Normal Game\nL - Long Game\nA - All Data\n")
 
