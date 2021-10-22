@@ -1,4 +1,5 @@
 import dbaction as dba
+import tabulate as tba
 
 def main_labels(stype,sgame,sweek):
     nlist = []
