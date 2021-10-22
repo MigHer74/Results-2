@@ -19,11 +19,11 @@ def view_db(vsel):
     cursor_db = cdb.cursor()
 
     if vsel == "N":
-        sentence_sql = "SELECT * FROM games WHERE idtype = 1 ORDER BY idtype, gametype, gameweek"
+        sentence_sql = "SELECT * FROM games WHERE idtype = 1 ORDER BY idtype, gameweek, gametype"
     elif vsel == "L":
-        sentence_sql = "SELECT * FROM games WHERE idtype = 2 ORDER BY idtype, gametype, gameweek"
+        sentence_sql = "SELECT * FROM games WHERE idtype = 2 ORDER BY idtype, gameweek, gametype"
     else:
-        sentence_sql = "SELECT * FROM games ORDER BY idtype, gametype, gameweek"
+        sentence_sql = "SELECT * FROM games ORDER BY idtype, gameweek, gametype"
     
     cursor_db.execute(sentence_sql)
     
