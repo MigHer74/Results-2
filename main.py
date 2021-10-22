@@ -6,7 +6,7 @@ cicle = True
 while cicle:
     os.system("cls")
 
-    print("N - Normal Game\nL - Long Game\nE - Enter Previous Data\nD - Delete All Data\nX - Exit\n")
+    print("N - Normal Game\nL - Long Game\nE - Enter Previous Data\nV - View Data\nD - Delete All Data\nX - Exit\n")
     
     sel = input("Choose an option: ")
 
@@ -16,6 +16,8 @@ while cicle:
         print("Long Game")
     elif sel == "E":
         ms.add_data()
+    elif sel == "V":
+        ms.show_data()        
     elif sel == "D":
         ms.delete_data()
     elif sel == "X":
