@@ -12,7 +12,6 @@ Instead of using 2 txt files storing the results of the last 6 weeks, I use a da
 
 I use 2 SQL script files contains sql sentences to update the data after enter de new numbers, there are 2 SQL scripts (one for short game and one for long game).
 
-I'm using lists, tuples and statements if, elif and for.
 For this project I'm using 2 python modules ("os" and "tabulate") and elements like functions, lists, tuples and statements if, elif and for.  
 
 The program is still growing, so I'm going to still update the progress.
