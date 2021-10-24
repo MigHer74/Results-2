@@ -10,6 +10,8 @@ The file named "main.py" is the launcher program, the file named "minis.py" cont
 
 Instead of using 2 txt files storing the results of the last 6 weeks, I use a database with a table named "games" contains all de numbers of the 2 types of games. This database has created in SQLite.
 
+I use 2 SQL script files contains sql sentences to update the data after enter de new numbers, there are 2 SQL scripts (one for short game and one for long game).
+
 I'm using lists, tuples and statements if, elif and for.
 
 The program is still growing, so I'm going to still update the progress.
@@ -20,6 +22,8 @@ The program is still growing, so I'm going to still update the progress.
 - main.py     | Main Program.
 - minis.py    | General program functions.
 - dbaction.py | Functions that interact with the database
+- script_n.sql | SQL script (update data for short game).
+- script_l.sql | SQL script (update data for long game).
 - results2.db | Database file.
 
 
