@@ -14,6 +14,26 @@ def add_db(a):
     cdb.close()
 
 
+def view_db(vsel):
+    cdb = connect_db()
+    cursor_db = cdb.cursor()
+
+    if vsel == "N":
+        sentence_sql = "SELECT * FROM games WHERE idtype = 1 ORDER BY idtype, gameweek, gametype"
+    elif vsel == "L":
+        sentence_sql = "SELECT * FROM games WHERE idtype = 2 ORDER BY idtype, gameweek, gametype"
+    else:
+        sentence_sql = "SELECT * FROM games ORDER BY idtype, gameweek, gametype"
+    
+    cursor_db.execute(sentence_sql)
+    
+    data = cursor_db.fetchall()
+    
+    cdb.close()
+
+    return data
+
+
 def delete_db(a):
     cdb = connect_db()
     cursor_db = cdb.cursor()

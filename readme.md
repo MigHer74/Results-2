@@ -8,11 +8,12 @@ After enter the data of each week, the program gives the numbers who has 2, 3, 4
 
 The file named "main.py" is the launcher program, the file named "minis.py" contains the functions of the main program and the file named "dbaction.py" contains the functions for the database actions.
 
-Instead of using 2 txt files storing the results of the last 6 weeks, I use a database with a table named "games" contains all de numbers of the 2 types of games. This database has created in SQLite.
+Instead of using 2 txt files storing the results of the last 6 weeks, I use a database named "results2.db" with a table named "games" contains all de numbers of the 2 types of games. This database has created in SQLite.
 
 I use 2 SQL script files contains sql sentences to update the data after enter de new numbers, there are 2 SQL scripts (one for short game and one for long game).
 
 I'm using lists, tuples and statements if, elif and for.
+For this project I'm using 2 python modules ("os" and "tabulate") and elements like functions, lists, tuples and statements if, elif and for.  
 
 The program is still growing, so I'm going to still update the progress.
   
