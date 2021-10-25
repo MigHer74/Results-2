@@ -25,6 +25,20 @@ def main_labels(stype,sgame,sweek):
     return nlist
 
 
+def enter_data(selg):
+    if selg == "N":
+        dba.change_db(selg)
+        data = main_labels(1,"T1","W1")
+        data = check_data(data)
+        dba.enter_db(data)
+    else:
+        dba.change_db(selg)
+        for i in range(1,4):
+            data = main_labels(2,"T" + str(i),"W1")
+            data = check_data(data)
+            dba.add_db(data)
+
+
 def add_data():
     print("Select the game you want to enter de data:\n\nN - Normal Game\nL - Long Game\n")
 
