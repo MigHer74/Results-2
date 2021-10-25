@@ -11,9 +11,9 @@ while cicle:
     sel = input("Choose an option: ")
 
     if sel == "N":
-        print("Normal Game")
+        ms.enter_data("N")
     elif sel == "L":
-        print("Long Game")
+        ms.enter_data("L")
     elif sel == "E":
         ms.add_data()
     elif sel == "V":
