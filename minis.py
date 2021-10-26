@@ -5,11 +5,11 @@ def main_labels(stype,sgame,sweek):
     nlist = []
 
     if sgame == "T1":
-        label = " GROUP #1 \n----------"
+        label = "\n GROUP #1 \n----------"
     elif sgame == "T2":
-        label = " GROUP #2 \n----------"
+        label = "\n GROUP #2 \n----------"
     else:
-        label = " GROUP #3 \n----------"
+        label = "\n GROUP #3 \n----------"
 
     print(label)
 
