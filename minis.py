@@ -25,6 +25,30 @@ def main_labels(stype,sgame,sweek):
     return nlist
 
 
+def select_game():
+    datal = []
+
+    print("S - Short Game\nL - Long Game\n")
+
+    gsel = input("Choose an option: ")
+
+    if gsel == "S":
+        enter_data("S")
+        data = dba.view_db("S")
+    else:
+        enter_data("L")
+        data = dba.view_db("L")
+
+    for d in data:
+        dlist = list(d)
+        dlist = dlist[3:]
+        
+        for dd in dlist:
+            datal.append(dd)
+    
+    engine_game(datal, gsel)
+
+
 def enter_data(selg):
     if selg == "N":
         dba.change_db(selg)
