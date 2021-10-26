@@ -50,7 +50,7 @@ def select_game():
 
 
 def enter_data(selg):
-    if selg == "N":
+    if selg == "S":
         dba.change_db(selg)
         data = main_labels(1,"T1","W1")
         data = check_data(data)
@@ -64,20 +64,20 @@ def enter_data(selg):
 
 
 def add_data():
-    print("Select the game you want to enter de data:\n\nN - Normal Game\nL - Long Game\n")
+    print("Select the game you want to enter de data:\n\nS - Short Game\nL - Long Game\n")
 
     gsel = input("Choose an option: ")
 
-    if gsel == "N":
+    if gsel == "S":
         for i in range(1,7):
-            print(" WEEK #" + str(i),"\n----------")
+            print("\n WEEK #" + str(i),"\n----------")
             data = main_labels(1,"T1","W" + str(i))
             data = check_data(data)
             dba.add_db(data)
     else:
         for i in range(1,7):
             for ii in range(1,4):
-                print(" WEEK #" + str(i),"\n----------")
+                print("\n WEEK #" + str(i),"\n----------")
                 data = main_labels(2,"T" + str(ii),"W" + str(i))
                 data = check_data(data)
                 dba.add_db(data)
@@ -110,7 +110,7 @@ def check_data(data):
 
 
 def show_data():
-    print("Select the data you want to view:\n\nN - Normal Game\nL - Long Game\nA - All Data\n")
+    print("Select the data you want to view:\n\nS - Normal Game\nL - Long Game\nA - All Data\n")
 
     vsel = input("Choose an option: ")
     data = dba.view_db(vsel)
@@ -122,10 +122,66 @@ def show_data():
 
 
 def delete_data():
-    print("Select the game you want to delete de data:\n\nN - Normal Game\nL - Long Game\nA - All Data\n")
+    print("Select the game you want to delete de data:\n\nS - Normal Game\nL - Long Game\nA - All Data\n")
 
     gsel = input("Choose an option: ")
     csel = input("Are you sure to delete the data (Y/N) ? ")
 
     if csel == "Y":
         dba.delete_db(gsel)
+
+
+def engine_game(mlist,gsel):
+    n2 = []
+    n3 = []
+    n4 = []
+    n5 = []
+    n6 = []
+    
+    mlist.sort()
+
+    # 39 - Short
+    # 56 - Long
+
+    if gsel == "S":
+        for n in range(1,40):
+            count = mlist.count(n)
+
+            if count == 2:
+                n2.append(n)
+            elif count == 3:
+                n3.append(n)
+            elif count == 4:
+                n4.append(n)
+            elif count >= 5:
+                n5.append(n)
+    else:
+        for n in range(1,57):
+            count = mlist.count(n)
+
+            if count == 3:
+                n2.append(n)
+            elif count == 4:
+                n3.append(n)
+            elif count == 5:
+                n4.append(n)
+            elif count >= 6:
+                n5.append(n)
+    
+    print("\n Results\n---------")
+
+    if gsel == "S":    
+        print("\tNumbers with 2 repetitions........:", n2)
+
+    print("\tNumbers with 3 repetitions........:", n3)
+    print("\tNumbers with 4 repetitions........:", n4)
+
+    if gsel == "S":
+        print("\tNumbers with 5 or more repetitions:", n5)
+    else:
+        print("\tNumbers with 5 repetitions........:", n5)
+
+    if gsel == "L":
+        print("\tNumbers with 6 or more repetitions:", n6)
+    
+    input("\n\tPress any key to continue...")
