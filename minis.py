@@ -32,12 +32,19 @@ def select_game():
 
     gsel = input("Choose an option: ")
 
-    if gsel == "S":
-        enter_data("S")
-        data = dba.view_db("S")
+    if typeg == "E":
+        if gsel == "S":
+            enter_data("S")
+            data = dba.view_db("S")
+        else:
+            enter_data("L")
+            data = dba.view_db("L")
     else:
-        enter_data("L")
-        data = dba.view_db("L")
+        if gsel == "S":
+            data = dba.view_db("S")
+        else:
+            data = dba.view_db("L")
+
 
     for d in data:
         dlist = list(d)
@@ -52,13 +59,13 @@ def select_game():
 def enter_data(selg):
     if selg == "S":
         dba.change_db(selg)
-        data = main_labels(1,"T1","W1")
+        data = main_labels("A","T1","W1")
         data = check_data(data)
         dba.enter_db(data)
     else:
         dba.change_db(selg)
         for i in range(1,4):
-            data = main_labels(2,"T" + str(i),"W1")
+            data = main_labels("B","T" + str(i),"W1")
             data = check_data(data)
             dba.add_db(data)
 
@@ -71,14 +78,14 @@ def add_data():
     if gsel == "S":
         for i in range(1,7):
             print("\n WEEK #" + str(i),"\n----------")
-            data = main_labels(1,"T1","W" + str(i))
+            data = main_labels("A","T1","W" + str(i))
             data = check_data(data)
             dba.add_db(data)
     else:
         for i in range(1,7):
             for ii in range(1,4):
                 print("\n WEEK #" + str(i),"\n----------")
-                data = main_labels(2,"T" + str(ii),"W" + str(i))
+                data = main_labels("B","T" + str(ii),"W" + str(i))
                 data = check_data(data)
                 dba.add_db(data)
 
@@ -122,7 +129,7 @@ def show_data():
 
 
 def delete_data():
-    print("Select the game you want to delete de data:\n\nS - Normal Game\nL - Long Game\nA - All Data\n")
+    print("Select the game you want to delete de data:\n\nS - Short Game\nL - Long Game\nA - All Data\n")
 
     gsel = input("Choose an option: ")
     csel = input("Are you sure to delete the data (Y/N) ? ")
