@@ -34,9 +34,9 @@ def view_db(vsel):
     cursor_db = cdb.cursor()
 
     if vsel == "N":
-        sentence_sql = "SELECT * FROM games WHERE idtype = 1 ORDER BY idtype, gameweek, gametype"
+        sentence_sql = "SELECT * FROM games WHERE idtype = 'A' ORDER BY idtype, gameweek, gametype"
     elif vsel == "L":
-        sentence_sql = "SELECT * FROM games WHERE idtype = 2 ORDER BY idtype, gameweek, gametype"
+        sentence_sql = "SELECT * FROM games WHERE idtype = 'B' ORDER BY idtype, gameweek, gametype"
     else:
         sentence_sql = "SELECT * FROM games ORDER BY idtype, gameweek, gametype"
     
@@ -54,9 +54,9 @@ def delete_db(a):
     cursor_db = cdb.cursor()
 
     if a == "N":
-        sentence_sql = "DELETE FROM games WHERE idtype = 1"
+        sentence_sql = "DELETE FROM games WHERE idtype = 'A'"
     elif a == "L":
-        sentence_sql = "DELETE FROM games WHERE idtype = 2"
+        sentence_sql = "DELETE FROM games WHERE idtype = 'B'"
     else:
         sentence_sql = "DELETE FROM games"
 
