@@ -25,7 +25,7 @@ def main_labels(stype,sgame,sweek):
     return nlist
 
 
-def select_game():
+def select_game(typeg):
     datal = []
 
     print("S - Short Game\nL - Long Game\n")
