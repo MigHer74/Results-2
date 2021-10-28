@@ -1,4 +1,4 @@
-DELETE FROM games WHERE idtype = 2 AND gameweek = 'W6';
+DELETE FROM games WHERE idtype = 'B' AND gameweek = 'W6';
 
 UPDATE games SET gameweek = 'W6' WHERE idtype = 2 AND gameweek = 'W5';
 UPDATE games SET gameweek = 'W5' WHERE idtype = 2 AND gameweek = 'W4';
