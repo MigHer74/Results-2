@@ -129,10 +129,10 @@ def show_data():
 
 
 def delete_data():
-    print("Select the game you want to delete de data:\n\nS - Short Game\nL - Long Game\nA - All Data\n")
+    print("Select the game you want to delete de data:\n\nS - Short Game\nL - Long Game\nA - All Data\nC - Cancel\n")
 
     gsel = input("Choose an option: ")
-    csel = input("Are you sure to delete the data (Y/N) ? ")
+    csel = input("\nAre you sure to delete the data (Y/N) ? ")
 
     if csel == "Y":
         dba.delete_db(gsel)
