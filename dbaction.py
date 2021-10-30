@@ -53,13 +53,19 @@ def delete_db(a):
     cdb = connect_db()
     cursor_db = cdb.cursor()
 
-    if a == "N":
-        sentence_sql = "DELETE FROM games WHERE idtype = 'A'"
+    if a == "S":
+        cursor_db.execute("DELETE FROM games WHERE idtype = 'A'")
+        ok_mess = "DATA DELETED SUCCESSFULLY"
     elif a == "L":
-        sentence_sql = "DELETE FROM games WHERE idtype = 'B'"
+        cursor_db.execute("DELETE FROM games WHERE idtype = 'B'")
+        ok_mess = "DATA DELETED SUCCESSFULLY"
+    elif a == "A":
+        cursor_db.execute("DELETE FROM games")
+        ok_mess = "DATA DELETED SUCCESSFULLY"
     else:
-        sentence_sql = "DELETE FROM games"
+        ok_mess = "OPERATION CANCELLED"
 
-    cursor_db.execute(sentence_sql)
+    input(f"\n{ok_mess}\nPress any key to continue...")
+
     cdb.commit()
     cdb.close()
