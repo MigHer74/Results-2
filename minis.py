@@ -117,7 +117,7 @@ def check_data(data):
 
 
 def show_data():
-    print("Select the data you want to view:\n\nS - Normal Game\nL - Long Game\nA - All Data\n")
+    print("Select the data you want to view:\n\nS - Short Game\nL - Long Game\nA - All Data\n")
 
     vsel = input("Choose an option: ")
     data = dba.view_db(vsel)
