@@ -18,7 +18,7 @@ def change_db(selg):
     cdb = connect_db()
     cursor_db = cdb.cursor()
 
-    if selg == "N":
+    if selg == "S":
         script_sql = open("script_s.sql")
     else:
         script_sql = open("script_l.sql")
