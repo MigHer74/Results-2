@@ -61,7 +61,7 @@ def enter_data(selg):
         dba.change_db(selg)
         data = main_labels("A","T1","W1")
         data = check_data(data)
-        dba.enter_db(data)
+        dba.add_db(data)
     else:
         dba.change_db(selg)
         for i in range(1,4):
