@@ -167,13 +167,13 @@ def engine_game(mlist,gsel):
             count = mlist.count(n)
 
             if count == 3:
-                n2.append(n)
-            elif count == 4:
                 n3.append(n)
-            elif count == 5:
+            elif count == 4:
                 n4.append(n)
-            elif count >= 6:
+            elif count == 5:
                 n5.append(n)
+            elif count >= 6:
+                n6.append(n)
     
     print("\n Results\n---------")
 
