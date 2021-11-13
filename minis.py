@@ -177,18 +177,18 @@ def engine_game(mlist,gsel):
     
     print("\n Results\n---------")
 
-    if gsel == "S":    
-        print("\tNumbers with 2 repetitions........:", n2)
-
-    print("\tNumbers with 3 repetitions........:", n3)
-    print("\tNumbers with 4 repetitions........:", n4)
+    if gsel == "L":
+        print("\tNumbers with 6 or more repetitions:", n6)
 
     if gsel == "S":
         print("\tNumbers with 5 or more repetitions:", n5)
     else:
         print("\tNumbers with 5 repetitions........:", n5)
 
-    if gsel == "L":
-        print("\tNumbers with 6 or more repetitions:", n6)
+    print("\tNumbers with 4 repetitions........:", n4)
+    print("\tNumbers with 3 repetitions........:", n3)
     
+    if gsel == "S":
+        print("\tNumbers with 2 repetitions........:", n2)
+
     input("\n\tPress any key to continue...")
